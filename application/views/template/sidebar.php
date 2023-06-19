@@ -34,6 +34,9 @@
                                          <li class="nav-item">
                                              <a href="<?php echo base_url('pengguna') ?>" class="nav-link">pengguna</a>
                                         </li>
+                                        <li class="nav-item">
+                                             <a href="<?php echo base_url('prodi') ?>" class="nav-link">prodi</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>                       
