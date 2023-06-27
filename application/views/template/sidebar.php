@@ -28,15 +28,17 @@
                                          <li class="nav-item">
                                              <a href="<?php echo base_url('persyaratan') ?>" class="nav-link">Persyaratan</a>
                                         </li>
+                                        <li class="nav-item">
+                                             <a href="<?php echo base_url('prodi') ?>" 
+                                             class="nav-link">Program Studi</a>
+                                        </li>
                                          <li class="nav-item">
                                              <a href="<?php echo base_url('pendaftaran') ?>" class="nav-link">Pendaftaran Akun</a>
                                         </li>
                                          <li class="nav-item">
                                              <a href="<?php echo base_url('pengguna') ?>" class="nav-link">pengguna</a>
                                         </li>
-                                        <li class="nav-item">
-                                             <a href="<?php echo base_url('prodi') ?>" class="nav-link">prodi</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </li>                       

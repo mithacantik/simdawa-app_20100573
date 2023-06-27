@@ -7,6 +7,13 @@ class Jenis extends CI_Controller {
     {
         parent:: __construct();
         $this->load->model('JenisModel');
+        $this->load->library('pdf');
+    }
+
+    // Cetak
+    public function cetak() {
+        $data['jenis'] = $this->JenisModel->get_jenis();
+        $this->load->view('jenis/jenis_print', $data);
     }
 
 	public function index()

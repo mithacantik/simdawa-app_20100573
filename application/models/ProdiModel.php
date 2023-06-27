@@ -16,6 +16,15 @@
             ];
 
             $this->db->insert($this->tabel, $data);
+
+            //Notifikasi
+            if ($this->db->affected_rows()>0) {
+                $this->session->set_flashdata('pesan', "Data prodi berhasil ditambahkan");
+                $this->session->set_flashdata('status', true);
+            } else {
+                $this->session->set_flashdata('pesan', "Data prodi gagal ditambahkan!");
+                $this->session->set_flashdata('status', false);
+            }
         }
 
         public function get_prodi_byid($id){
@@ -30,11 +39,29 @@
             ];
             $this->db->where('id', $this->input->post('id'));
             $this->db->update($this->tabel, $data);
+
+            //Notifikasi
+            if ($this->db->affected_rows()>0) {
+                $this->session->set_flashdata('pesan', "Data prodi berhasil diubah");
+                $this->session->set_flashdata('status', true);
+            } else {
+                $this->session->set_flashdata('pesan', "Data prodi gagal diubah!");
+                $this->session->set_flashdata('status', false);
+            }
         }
 
         public function delete_prodi($id){
             $this->db->where('id', $id);
             $this->db->delete($this->tabel);
+
+            //Notifikasi
+            if ($this->db->affected_rows()>0) {
+                $this->session->set_flashdata('pesan', "Data prodi berhasil dihapus");
+                $this->session->set_flashdata('status', true);
+            } else {
+                $this->session->set_flashdata('pesan', "Data prodi gagal dihapus!");
+                $this->session->set_flashdata('status', false);
+            }
         }
     }
 ?>

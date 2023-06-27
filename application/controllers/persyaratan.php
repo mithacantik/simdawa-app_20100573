@@ -7,6 +7,13 @@ class Persyaratan extends CI_Controller {
     {
         parent:: __construct();
         $this->load->model('PersyaratanModel');
+        $this->load->library('pdf');
+    }
+
+    // Cetak
+    public function cetak() {
+        $data['persyaratan'] = $this->PersyaratanModel->get_persyaratan();
+        $this->load->view('persyaratan/persyaratan_print', $data);
     }
 
 	public function index()
